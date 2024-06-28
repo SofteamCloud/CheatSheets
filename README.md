@@ -46,16 +46,20 @@ Veuillez vous assurer que votre cheat sheet suit une structure claire et est fac
 Le dépôt est organisé par catégories. Chaque catégorie a son propre répertoire. Par exemple :
 
 ```
-cheat-sheets/
-|-- programmation/
-|   |-- bash-cheat-sheet.md
-|   |-- python-best-practices.md
-|-- cloud/
-|   |-- aws-cheat-sheet.md
-|   |-- azure-cheat-sheet.md
-|-- outils/
-|   |-- docker-cli-cheat-sheet.md
-|   |-- kubernetes-cheat-sheet.md
+├── README.md
+├── cloud
+│   └── aws-cheat-sheet.md
+├── global
+│   └── markdown-cheat-sheet.md
+├── outils
+│   ├── ansible-cheatsheet.md
+│   ├── docker-cli-cheat-sheet.md
+│   ├── dockeroptim.md
+│   ├── gitTool.md
+│   └── kubernetes-cheat-sheet.md
+└── programmation
+    ├── bash-cheat-sheet.md
+    └── python_best_practices.md
 ```
 
 N'hésitez pas à ajouter de nouveaux répertoires si votre cheat sheet ne correspond à aucune catégorie existante.
