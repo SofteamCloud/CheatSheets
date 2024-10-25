@@ -4,6 +4,8 @@ To Prevents you from committing passwords and other sensitive information to a g
 acting before something bad happen 😉  
 `brew install git-secrets`
 
+[Installation guide pour Windows](https://github.com/awslabs/git-secrets?tab=readme-ov-file#windows) 
+
 Add a configuration template if you want to add hooks to all repositories you initialize or clone in the future.  
 `git secrets --register-aws --global`   
 Add hooks to all your local repositories.  
