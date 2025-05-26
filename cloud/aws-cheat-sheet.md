@@ -138,7 +138,7 @@ for profile in audit log mgt prod digital archi form data finance bordeaux; do
   echo "Checking profile: $profile"
   for region in eu-west-3 eu-west-1 eu-central-1 eu-north-1 us-east-1 us-east-2 us-west-2; do
     echo "  Region: $region"
-    aws lambda list-functions --region $region --profile $profile --output text --query "Functions[?Runtime=='nodejs16.x'].FunctionArn"
+    aws lambda list-functions --region $region --profile $profile --query "Functions[?Runtime=='nodejs18.x'].[FunctionName,Runtime]" --output table
   done
 done
 ```
