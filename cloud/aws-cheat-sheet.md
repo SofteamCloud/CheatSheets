@@ -132,6 +132,16 @@ aws ssm get-parameter --region us-west-2 --name "/aws/service/bottlerocket/aws-k
 aws lambda list-functions --function-version ALL --output text --query "Functions[?Runtime=='nodejs10.x'].FunctionArn"
 ```
 
+### Find old lambda runtime on many profiles and region 
+```sh 
+for profile in audit log mgt prod digital archi form data finance bordeaux; do
+  echo "Checking profile: $profile"
+  for region in eu-west-3 eu-west-1 eu-central-1 eu-north-1 us-east-1 us-east-2 us-west-2; do
+    echo "  Region: $region"
+    aws lambda list-functions --region $region --profile $profile --output text --query "Functions[?Runtime=='nodejs16.x'].FunctionArn"
+  done
+done
+```
 ## CloudFormation
 
 ### Searching stack name by partial name
